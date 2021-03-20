@@ -14,7 +14,7 @@ class Suit extends Migration
     public function up()
     {
         Schema::create('suit', function (Blueprint $table) {
-            $table->bigIncrements();
+            $table->bigIncrements("id");
             $table->integer('length')->nullable();
             $table->integer('shoulder')->nullable();
             $table->integer('sleeve')->nullable();
@@ -36,6 +36,7 @@ class Suit extends Migration
             $table->integer('suit_type');
 
             $table->string('detail');
+            $table->string('status');
             $table->timestamps();
         });
     }
